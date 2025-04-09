@@ -1,0 +1,112 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color 0.3s;
+  height: 68px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+.scrolled {
+  background-color: var(--background);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.mobileMenuButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.mobileNavLink {
+  padding: 10px 4%;
+  color: var(--text-secondary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profileImage {
+  border-radius: 4px;
+}
+
+@media (max-width: 960px) {
+  .navigation {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}

@@ -1,0 +1,137 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+.content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 3.5vw;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile:hover .name {
+  color: white;
+}
+
+.profile:hover .avatar {
+  border-color: white;
+}
+
+.avatar {
+  width: 10vw;
+  height: 10vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 84px;
+  min-height: 84px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.3vw;
+  transition: color 0.2s ease;
+}
+
+.addProfile .avatar {
+  background-color: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  color: var(--text-secondary);
+}
+
+.manageButton {
+  display: inline-block;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-secondary);
+  padding: 0.5em 1.5em;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.manageButton:hover {
+  color: white;
+  border-color: white;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 5vw;
+  }
+
+  .name {
+    font-size: 2vw;
+  }
+
+  .manageButton {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 6vw;
+  }
+
+  .name {
+    font-size: 3vw;
+  }
+
+  .manageButton {
+    font-size: 3vw;
+  }
+
+  .profiles {
+    gap: 4vw;
+  }
+}

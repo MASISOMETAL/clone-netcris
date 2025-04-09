@@ -1,0 +1,121 @@
+.container {
+  margin-bottom: 3vw;
+  padding: 0 4%;
+}
+
+.title {
+  font-size: 1.4vw;
+  line-height: 1.25vw;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.sliderContainer {
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.sliderButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 4%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sliderContainer:hover .sliderButton {
+  opacity: 1;
+}
+
+.sliderButtonLeft {
+  left: 0;
+}
+
+.sliderButtonRight {
+  right: 0;
+}
+
+.movieCard {
+  flex: 0 0 auto;
+  width: 16.66%;
+  padding: 0 0.2vw;
+  transition: transform 0.3s;
+}
+
+.movieCard:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.moviePoster {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* 2:3 aspect ratio */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.posterImage {
+  object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+  .movieCard {
+    width: 20%;
+  }
+
+  .title {
+    font-size: 1.6vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .movieCard {
+    width: 25%;
+  }
+
+  .title {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .movieCard {
+    width: 33.33%;
+  }
+
+  .title {
+    font-size: 2.2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .movieCard {
+    width: 50%;
+  }
+
+  .title {
+    font-size: 4vw;
+  }
+}

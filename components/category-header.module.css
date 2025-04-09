@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4%;
+  position: relative;
+}
+
+.title {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 5vw;
+  }
+}
