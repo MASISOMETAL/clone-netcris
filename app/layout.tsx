@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Netflix Clone",
   description: "A Netflix clone built with Next.js",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

@@ -22,6 +22,31 @@ export default function Home() {
       setIndexMovie(index)
     }, 7000)
 
+
+    const test = async () => {
+      try {
+        const url = 'https://api.themoviedb.org/3/movie/1'
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NGQ1ODY5ZWI3OTQ2MWE3NTFjNmIwODE2Y2MwY2Q4NyIsIm5iZiI6MTc0NDcyMjI1OS41OTAwMDAyLCJzdWIiOiI2N2ZlNTk1M2Q2NDVlNDFlMDk5OTFlNWEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.N8MuvhtGI3Cnp2MIsEttoBIAFY9ZXZm5Mk4PMZunlzE`,
+            'accept': 'application/json'
+          }
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json()
+        console.log(data);
+      } catch (error) {
+        console.log("Ocurrió un error al traer los datos: ", error);
+
+      }
+    }
+
+    test()
+
     return () => clearInterval(interval)
 
   }, [])
